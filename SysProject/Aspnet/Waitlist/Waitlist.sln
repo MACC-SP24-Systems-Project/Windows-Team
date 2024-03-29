@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Waitlist", "Waitlist.csproj", "{596C2279-FFF1-4424-A00A-4463F9310F87}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{C6965E55-6A7F-4B23-BE60-FDB091F931AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "View", "View", "{D64F3E78-E5E7-47AC-A5CA-10A6179C67B9}"
+	ProjectSection(SolutionItems) = preProject
+		Pages\Index.cshtml = Pages\Index.cshtml
+		Pages\Index.cshtml.cs = Pages\Index.cshtml.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Control", "Control", "{5097C4F3-0DDA-4B81-9BF3-09F2199D31C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{596C2279-FFF1-4424-A00A-4463F9310F87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{596C2279-FFF1-4424-A00A-4463F9310F87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{596C2279-FFF1-4424-A00A-4463F9310F87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{596C2279-FFF1-4424-A00A-4463F9310F87}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F4EB1B1-BDD6-4A16-B439-703C74858526}
+	EndGlobalSection
+EndGlobal

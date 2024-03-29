@@ -1,0 +1,35 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/* Set default text color */
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff; 
+}
+
+/* Change background color on hover, change text color on hover */
+.navbar-dark .navbar-nav .nav-link:hover {
+        background-color: lightgrey; 
+        color: #333; 
+}
+
+
