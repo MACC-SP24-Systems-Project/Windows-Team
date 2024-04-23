@@ -1,5 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Scaffolding.Metadata;
+using Waitlist.EntityModels;
+using Waitlist;
+
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddDbContext<TestDbContext>(options =>
+{
+    options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"), new MySqlServerVersion(new Version(8, 0, 26)));
+});
+
+builder.Services.AddTransient<IDatabaseService, DatabaseService>();
 // Add services to the container.
 builder.Services.AddRazorPages();
 
