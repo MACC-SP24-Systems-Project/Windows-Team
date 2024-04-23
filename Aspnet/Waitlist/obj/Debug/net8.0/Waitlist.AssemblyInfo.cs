@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Waitlist")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f95285a4006964b18bb288c38003900dc16a856d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b3bbe312fa6fb20edb3c768d237ece6ce6ac15c7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Waitlist")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Waitlist")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

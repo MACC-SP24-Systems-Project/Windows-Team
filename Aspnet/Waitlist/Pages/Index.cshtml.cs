@@ -43,7 +43,7 @@ namespace YourNamespace.Pages
             SubmitTime = DateTime.Now;
 
             // Prepare the data to be written to the CSV file
-            var csvData = $"{ClassType}{CourseNumber}{SectionNumber}-{Term}-{FirstName}-{LastName}-{Email}-{SubmitTime}{Environment.NewLine}";
+            var csvData = $"{ClassType}-{CourseNumber}-{SectionNumber}|{Term}|{FirstName}|{LastName}|{Email}|{SubmitTime}{Environment.NewLine}";
 
             // Determine the path to the CSV file
             var filePath = Path.Combine("csv", "Results.csv");
