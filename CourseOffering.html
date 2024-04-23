@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta http-equiv="X-UA-Compatible" content="IE=EDGE" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" /><title>
+	Course Search - Student Registration Portlet_ Course Search View | Course Offerings | myMACC
+</title><base href="https://my.macc.edu/ICS/">
+<script type="text/javascript">
+    window.jenzabar = {};
+    jenzabar.userSettings = {
+        culture:    'en-US',
+        language:   'en',
+        dateFormat: 'm/d/yy'
+    };
+    window.userSettings = jenzabar.userSettings;
+
+    jenzabar.jicsVersion = {
+        text: {
+	        version: '?v=' + '2023.1'
+        }
+    }
+    jenzabar.siteSettings = {
+        textEditorSettings: {
+            customAudioMinutesLimit: 5,
+            customVideoMinutesLimit: 5
+        },
+        text: {
+            more: 'More'
+        }
+    };
+</script>
+
+<!-- BEGIN Html Head Elements -->
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+<script src="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.3.0"></script>
+<link rel="stylesheet" type="text/css" href="/ICS/UI/Common/Styles/jQuery/jquery-ui.custom.css" />
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<script type="text/javascript" src="portlets/cus/ics/BCProxyLogin/Scripts/ProxyLogin.js"></script>
+			<link type="text/css" rel="stylesheet" href="portlets/cus/ics/BCProxyLogin/Styles/ProxyLoginStyles.css" />
+<script type="text/javascript" src="/ICS/Portlets/CRM/Common/Jenzabar.EX.Common/Scripts/Jenzabar/selectWoo.full.js?v=2023.1"></script>
+<script type="text/javascript" src="/ICS/Portlets/CRM/Common/Jenzabar.EX.Common/Scripts/Jenzabar/jquery.tokeninput.js?v=2023.1"></script>
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/Plugins/moment.min.js?v=2023.1"></script>
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/fullcalendar/fullcalendar.min.js?v=2023.1"></script>
+<link rel="stylesheet" type="text/css" href="/ICS/UI/Common/Scripts/fullcalendar/fullcalendar.min.css?v=2023.1">
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/signalr.js/2.4.0/jquery.signalR.min.js?v=2023.1"></script>
+<script type="text/javascript" src="/ICS/signalr/hubs?v=2023.1"></script>
+<script type="text/javascript" src="/ICS/Portlets/CRM/Common/Jenzabar.EX.Common/Scripts/Jenzabar/footable.js?v=2023.1"></script>
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/tinymce/plugins/moxiemanager/js/moxman.loader.min.js?v=2023.1"></script>
+<link rel="stylesheet" type="text/css" href="/ICS/Portlets/CRM/Common/Jenzabar.EX.Common/css/ex-crm-bundle.css?v=2023.1.0.3 J1_Web_Application_Services">
+<!-- END Html Head Elements -->
+
+<link href="/ICS/UI/Common/Styles/css/site-bundle.css?v=Dfngzn7hCnEDkeqrkw1iFVnkZc6fCz2e4CLxhEPoOnc1" rel="stylesheet"/>
+
+
+<link href="/ICS/Portlets/CRM/Student/Portlet.StudentRegistration/Styles/StudentRegistration.css" type="text/css" rel="stylesheet" />
+
+<link rel="stylesheet" type="text/css" media="print" href="/ICS/UI/Common/Styles/print.css" />
+
+<script src="/ICS/UI/Common/Scripts/site-bundle.js?v=pIP_zynZ4CkiB5-ayGDE2Xek3gUfLpXefud64rJ3x_Q1"></script>
+
+
+<!-- BEGIN Html Head Elements After JICS JS Framework -->
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css?v=2023.1">
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/SignalRManager.js?v=2023.1"></script>
+<script type="text/javascript" src="/ICS/Portlets/CRM/Common/Jenzabar.EX.Common/Scripts/Jenzabar/jzb-common-calendar.js?v=2023.1"></script>
+<script type="text/javascript" src="/ICS/Portlets/CRM/Common/Jenzabar.EX.Common/Scripts/Jenzabar/jzbCalendar.js?v=2023.1"></script>
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jquery-footable/3.1.6/footable.bootstrap.min.css?v=2023.1">
+<script type="text/javascript" src="/ICS/Portlets/CRM/Common/Jenzabar.EX.Common/Scripts/Jenzabar/JzbTable.js?v=2023.1"></script>
+<script type="text/javascript" src="/ICS/Portlets/CRM/Common/Jenzabar.EX.Common/Scripts/Jenzabar/Fetching.js?v=2023.1"></script>
+<script type="text/javascript" src="/ICS/Portlets/CRM/Common/Jenzabar.EX.Common/Scripts/Jenzabar/JzbPaging.js?v=2023.1"></script>
+<script type="text/javascript" src="/ICS/Portlets/CRM/Common/Jenzabar.EX.Common/Scripts/Jenzabar/JzbSorting.js?v=2023.1"></script>
+<script type="text/javascript" src="/ICS/Portlets/CRM/Common/Jenzabar.EX.Common/Scripts/Jenzabar/DisplayTableFormat.js?v=2023.1"></script>
+<script type="text/javascript" src="/ICS/Portlets/CRM/Common/Jenzabar.EX.Common/Scripts/Jenzabar/jzb-loading-indicator.js?v=2023.1.0.3 J1_Web_Application_Services"></script>
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/LayoutManager.js?v=2023.1"></script>
+<script type="text/javascript" src="/ICS/Portlets/CRM/Common/Jenzabar.EX.Common/Scripts/Jenzabar/commonUtils.js?v=2023.1.0.3 J1_Web_Application_Services"></script>
+<script type="text/javascript" src="/ICS/Portlets/CRM/Common/Jenzabar.EX.Common/Scripts/Jenzabar/remainingcharcount.js?v=2023.1.0.3 J1_Web_Application_Services"></script>
+<script type="text/javascript" src="/ICS/Portlets/CRM/Common/Jenzabar.EX.Common/Scripts/Jenzabar/inputValidation.js?v=2023.1.0.3 J1_Web_Application_Services"></script>
+<!-- END Html Head Elements After JICS JS Framework -->
+
+
+<!--[if IE]>
+<style type="text/css" media="all">@import url( UI/Common/Styles/IEOnly.css );</style>
+<script type="text/javascript" language="JavaScript" src="UI/Common/Scripts/IEOnly.js"></SCRIPT>
+<![endif]-->
+<script type="text/javascript">
+    window.Portal =
+    {
+        url: 'https://my.macc.edu/ICS/',
+        uid: "d7f87b33-431e-4415-9746-48b52f917469",
+    };
+</script>
+
+
+<script type="text/javascript">
+    jQuery(function () {
+        jenzabar.framework.timeoutWarning.create(false);
+    });
+</script><link rel="stylesheet" type="text/css" href="/ICS/UI/Themes/Atlantica/style.css?v=1&u=03%2f05%2f2024+12%3a26%3a42" />
+<script type="text/javascript" src="/ICS/UI/Themes/Atlantica/js/javascript.js?v=1"></script>
+
+<style id="customCssImport_custom" type="text/css" media="all">
+	@import url( /ICS/StaticPages/GetFile.aspx?target=be7884da-8f42-4016-b362-9c70b7f95a83);
+</style>
+<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body onload="doLoad();" class="logged-in">
+	<div id="siteWrapper" class="custom-grid">
+		<form name="MAINFORM" method="post" action="/ICS/Course_Offerings.jnz?portlet=Course_Search&amp;screen=StudentRegistrationPortlet_CourseSearchView&amp;screenType=next" id="MAINFORM" enctype="multipart/form-data" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="_scriptManager_HiddenField" id="_scriptManager_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="46KAORIBDrXHAa77N5TtGwz+35HrRW7QdRLBbVeIoKhVYv3qIeSJ20Z2l5QcX5wtegWPVcOoghki7hf9p8EfqyeNGThnWiAy/3xls3gGTG61OtUSoYTftTe9HjOj7T0eg2oE4AUxeeF97Bf4F8jdADk5xx8th31V1yUeMsdQ+gFjCTSa41fgSoYZoNSpwJPbW5+2t3mJl5aEBvwBtXG7ENciICJxRJkR13VfadtKHw62stJsNEzfIQuyZAAt+VvYWrPi5AKFbUPiktHP1xYurZd2R3pMbIPEPTSPZJzvvVKYbhfPtsUbvQXw/SLagvxYo8dAkxAIabK7gucbHqgEduZTSOxV50g2K8qGrwe2f80lxAX81jWrFm+SKqq05s0+VaaQn+8muGesOUXdBoS2SFGdo1W/txLpG2BkaA0Jf6+CMfjHHk6rAdSKybchQarX2xuB8uu69rzIhqBpIg8dC/KKvajSIJqSLCgwJNUMhgiaPJ5GBakGDKXSfxI1G/EiAV+t9RE2c+hKyQ0rcgICjWtrY6vQVa5OQhkT9r+CVTsHoj9brkfVro1rnlK/+GLjp3EsNsh3dgBDANgUnn+XLLF60w+W5ZUdwBi0o3OX0Z3ulvzpenlz9/B4WBtAHxsiQ5G3BHJ9xD6Q0cUfh/WvnYLk59whLxAjdhiNkytcTcChycPJCHxvqFWBI91OjfPnMw1AE5s8VZJC9pO6mudCkfy/MhgXhVSBGK93bRoZ2v8DjvQmkk3hZLINpebJKu0/6zfcH6CQ+kcme5KWmVuZP/yCUQR4ExN1k5irJQof2t/px1S/scSAAQB7d1SzzWkbjjP2x8O4hzOmCFZ7jMYbOCJOgXBsPQ616qWNbPhA7zC1YtAY448sWQXutbNn1RLVpUaCVoTYOx9YdwBtUTvv5v0Q7d7KUojKzasSo//qs3WouScUowcOUXG11YC4BQOO0Q7BVY/euyqY+T3iRVy9E6TfXdLV8bWlqXeXdndSupj9WlwKY5eFqkayYiSVfpyL" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['MAINFORM'];
+if (!theForm) {
+    theForm = document.MAINFORM;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/ICS/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZJR1XK8NEn6wI25jpxPgY8I_HDu1XMJmuXrsx-UGfRzSFGMD0h5P2U1ZWt-oEMhCsA2&amp;t=638393033798026697" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+$(function() {jenzabar.framework.login.initializeForPossibleRedirect({continueButton: $('#siteNavBar_welcomeBackBarLoggedOut_JicsLoginRedirectContinue'),userNameSection: $('.init-user-username-section'),standardLoginFields: $('.init-user-password-section, .forgot-password-link, .init-user-login-btn'),userNameField: $('#userName'),passwordField: $('#password'),userLoginSection: $('#user-login-section'),simpleLoginButton: $('#jics-login-redirect-simple-button'),showStandardFieldsSection: $('#jics-login-show-standard-fields-section'),showStandardFieldsButton: $('#jics-login-show-standard-fields-button'),simpleLogin: $('.js-simple-login') },{"pleaseWaitForRedirect":"Please wait...","redirectModalTitle":"Login","checkingUserNameAccessibility":"Please wait for the login process to continue.","errorOccurred":"An unexpected error occurred during login. Try again, or contact an administrator for assistance."},null);});//]]>
+</script>
+
+<script src="/ICS/Portlets/CRM/Student/Portlet.StudentRegistration/Scripts/AddDropPeriod.js" type="text/javascript"></script>
+<script src="/ICS/Portlets/CRM/Student/Portlet.StudentRegistration/Scripts/StudentRegistrationHubManager.js" type="text/javascript"></script>
+<script src="/ICS/Portlets/CRM/Common/Jenzabar.EX.Common/Scripts/Jenzabar/AjaxLoadablePortlet.js" type="text/javascript"></script>
+<script src="/ICS/Portlets/CRM/Common/Jenzabar.EX.Common/Handlers/AjaxLoadablePortlet.js.ashx?id=PortletIde69e66c67ab34fde961d5655622aeeb1&amp;path=%2fICS%2fPortlets%2fCRM%2fStudent%2fPortlet.StudentRegistration%2fScripts%2fStudentRegistration.js&amp;name=StudentRegistrationPortlet" type="text/javascript"></script><script type="text/javascript">
+$(document).ready(function(e) {
+var PortletIde69e66c67ab34fde961d5655622aeeb1 = new StudentRegistrationPortlet("PortletIde69e66c67ab34fde961d5655622aeeb1", {});
+var ajaxPortlet6508531 = new AjaxPortlet("PortletIde69e66c67ab34fde961d5655622aeeb1",PortletIde69e66c67ab34fde961d5655622aeeb1.ViewInitialize);
+ajaxPortlet6508531.InitializePortlet();
+
+});
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+(function( pi, $) {pi.PageID = '';pi.DisplayName = '';pi.PageURL = '';pi.IsCustomizing ='';pi.IsShowingPortlet = '';}(window.PageInfo = window.PageInfo || {}, PageInfo));try {window.PageInfo.PageID = '722b446b-34fd-49c9-bddc-a9e98bf1bd21';window.PageInfo.DisplayName = 'Course Offerings';window.PageInfo.PageURL = '/ICS/Course_Offerings.jnz';window.PageInfo.IsCustomizing ='False';window.PageInfo.IsShowingPortlet = 'True';window.PageInfo.IsReadOnly = 'False';}catch(ex){ console.error(ex);}jenzabar.ex.crm.common.commonUtils.globalization.communicationErrorText = 'A serious error has occurred. Please contact your administrator.';
+jenzabar.ex.crm.common.commonUtils.globalization.communicationErrorText = 'A serious error has occurred. Please contact your administrator.';
+//]]>
+</script>
+
+<script src="/ICS/ScriptResource.axd?d=x6wALODbMJK5e0eRC_p1LV1j0HZ8BDlD5_pZHQPlmzCvLj2LTjB1sRPb3fqo3sWlCRx8vStj4OGjs1UZJYQ-bS4PIfToUQi7bjdUiJ_gALrhUeljuw-r_llT7Tfu8_ei0&amp;t=245582f9" type="text/javascript"></script>
+<script src="/ICS/ScriptResource.axd?d=P5lTttoqSeZXoYRLQMIScHlwc4GVfODFgWm_DRlAgdiN3KdQiY9JOF2p7RokWxukyqkhyigiLXIJN7zxnfgdaXZ7RZxici9P32henRR5ulqgvDPK-KUj3ygXkoemhhUq0&amp;t=245582f9" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="38ABEAAB" />
+</div>
+			<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('_scriptManager', 'MAINFORM', [], [], [], 90, '');
+//]]>
+</script>
+
+			<input name="___BrowserRefresh" type="hidden" id="___BrowserRefresh" value="1a708f3b-eb72-43b0-85d6-dd63c40b8a1f" />
+			
+			<header>
+				<a href="#content" class="skip-navigation sr-only-focusable">Skip to content</a>
+				
+
+<div class="site-header-container">
+	<div class="mobile-fixed-container"></div>
+	<div id="sitemasthead">
+		<div>
+			
+				<button id="main-nav-btn" class="btn btn-no-bg-hover-color-content-one glyphicons glyphicons-menu-hamburger main-nav-btn" type="button" data-toggle="collapse" data-target="#hamburger-menu-section" aria-expanded="false" aria-controls="hamburger-menu-section"><span class="sr-only">main navigation</span></button>
+				<h1 id="logo-heading">
+<a class="site-logo-link" href=".">
+	<img class="site-logo" src="/ICS/icsfs/MACC_Header_LogoG.png?target=28ea3451-9845-48ab-b264-387124b5a521" alt="MACC Header LogoG"/>
+</a>
+</h1>
+
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+	    if (searchBox !== null && searchBox !== undefined) {
+		    searchBox.searchPanel = 'siteNavBar_searchBox_searchPanel';
+		    searchBox.textBox = 'siteNavBar_searchBox_tbSearch';
+		    searchBox.button = 'siteNavBar_searchBox_lbSearch';
+		    searchBox.userId = "d7f87b33-431e-4415-9746-48b52f917469";
+		    searchBox.autoCompleteSelect = function(event, ui) {
+			    $("#" + searchBox.textBox).val(ui.item.value);
+			    __doPostBack('siteNavBar$searchBox$lbSearch','');
+		    };
+		    searchBox.initAutoComplete();
+		    $('#siteNavBar_searchBox_lbSearch').keypress(function(e) {
+			    var key = e.which;
+			    if (key === 32 || key === 13) {
+				    if (searchBox.searchClick()) {
+					    window.location.href = this.href;
+				    }
+				    return false;
+			    }
+		    });
+
+		    // Hack needed to comply with A11y
+		    $('#siteNavBar_searchBox_searchPanel').removeAttr('onkeypress');
+		    $('#siteNavBar_searchBox_tbSearch').keypress(function (e) {
+			    return WebForm_FireDefaultButton(e, searchBox.button);
+		    });
+	    }
+    });
+ </script>
+
+<span role="search">
+	<button id="siteNavBar_searchBox_SearchButton" class="btn btn-no-bg-hover-color-content-one glyphicons glyphicons-search search-btn" type="button" data-toggle="collapse" data-target="#search-section" aria-expanded="false" aria-controls="search-section">
+		<span class="sr-only">
+			Search
+		</span>
+	</button>
+</span>
+
+<div id="searchAutoCompleteResults" class="searchAutoComplete"> </div>
+
+<div id="siteNavBar_searchBox_searchPanel" class="search-panel" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;siteNavBar_searchBox_lbSearch&#39;)">
+	
+    <div id="siteNavBar_searchBox_divSideBarContainer">
+        <div id="search-section" aria-label="Search" class="search-section collapse popover fade bottom">
+            <div class="arrow" style="left: 90%;"></div>
+            <div class="popover-content form-wrapper">
+                <div class="form-group"> 
+                    <label for="siteNavBar_searchBox_tbSearch" id="siteNavBar_searchBox_lblForSearch" class="sr-only">Search</label>
+                    <input name="siteNavBar$searchBox$tbSearch" type="text" id="siteNavBar_searchBox_tbSearch" class="search-input global-search-input form-control" placeholder="Search..." onfocus="return searchBox.cleardefault();" onblur="return searchBox.restoredefault();" />
+               </div>
+                <a onclick="return searchBox.validate();" id="siteNavBar_searchBox_lbSearch" class="btn btn-sm btn-block btn-primary init-search-btn" role="button" href="javascript:__doPostBack(&#39;siteNavBar$searchBox$lbSearch&#39;,&#39;&#39;)">Search</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div id="welcomeBackBar" class="main-nav-submenu-container">
+	<button id="siteNavBar_welcomeBackBarLoggedIn_loginToggle" class="btn btn-no-bg-hover-color-content-one user-btn" type="button" data-toggle="collapse" data-target="#user-login-section" aria-expanded="false" aria-controls="user-login-section"><span class="custom-icon icon-user-icon no-profile-image"><i class="sr-only">Trenton Eugene Woll Account</i></span></button>
+	<div id="user-login-section" aria-labelledby="siteNavBar_welcomeBackBarLoggedIn_WelcomeBackMessage siteNavBar_welcomeBackBarLoggedIn_UserName" class="collapse user-login popover fade bottom">
+		<div class="arrow"></div>
+		<div class="popover-content">
+			<span id="siteNavBar_welcomeBackBarLoggedIn_WelcomeBackMessage" class="message">Welcome back</span>
+			<span id="siteNavBar_welcomeBackBarLoggedIn_UserName" class="user-name d-block">Trenton Eugene Woll</span>
+			<ul>
+				
+				
+				<li id="siteNavBar_welcomeBackBarLoggedIn_MyProfileSettingsListItem">
+					<a href="?tool=myProfileSettings" id="myProfileSettings" class="my-info-settings">
+						<span id="siteNavBar_welcomeBackBarLoggedIn_MyProfileSettingsLinkText">My profile & settings</span>
+					</a>
+				</li>
+				<li id="siteNavBar_welcomeBackBarLoggedIn_LogOutListItem">
+					<a href="javascript:__doPostBack('siteNavBar$welcomeBackBarLoggedIn','logout')" id="logout" class="btn btn-sm btn-block btn-primary init-logout-btn">
+						<span id="siteNavBar_welcomeBackBarLoggedIn_LogOutLinkText">Logout</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(function () {
+		$('#top-nav-bar').attr("aria-label", "Site tabs");
+	});
+</script>
+<nav id="top-nav-bar" class="top-nav-bar navbar navbar-default navbar-fixed-top">
+	<div class="nav-container">
+		<div id="header-tabs" class="link-scroll horizontal-slide">
+			<div class="collapse h-menu" id="hamburger-menu-section">
+				
+						<ul id="main-nav" class="nav navbar-nav no-margin">
+					
+						<li class="tabs tab_Home firstTab selected">
+							<a href="/ICS/">
+								Home
+							</a>
+						</li>
+					
+						<li class="tabs tab_Admissions">
+							<a href="/ICS/Admissions/">
+								Admissions
+							</a>
+						</li>
+					
+						<li class="tabs tab_Student">
+							<a href="/ICS/Student/">
+								Student
+							</a>
+						</li>
+					
+						<li class="tabs tab_My_Pages lastTab">
+							<a href="/ICS/My_Pages/">
+								My Pages
+							</a>
+						</li>
+					
+						</ul>
+					
+			</div>
+		</div>
+	</div>
+</nav>
+
+		</div>
+	</div>
+</div>
+
+			</header>
+			
+<div id="mainCrumbs" class="main-crumbs" role="navigation" aria-label="Site breadcrumb">
+	<span class="breadcrumbs-title text-bold">You are here:</span>
+	<span class="crumbs">
+		<ul id="youAreHere" class="breadcrumbs-container">
+			 <li><a href="/ICS/">Home</a></li>  <li><a href="/ICS/Course_Offerings.jnz">Course Offerings</a></li>  <li><a href="/ICS/Course_Offerings.jnz?portlet=Course_Search">Course Search</a></li> 
+			
+		</ul>
+	</span>
+</div>
+
+			
+			
+			<div id="mainLayout" class="main-layout">
+				<div class="container-fluid">
+					<div class="row">
+						
+						<nav aria-label="Site pages">
+							<div id="sideBar" aria-label="Sidebar links" class="col-md-2 mobile-padding-horizontal-none sidebar">
+								<div id="sidebar-slide-menu-container" class="slide-menu-right">
+									
+									<div id="thisContext" class="side-section"><span class="sidebar-link-title"><a href="/ICS/"  accesskey="">myMACC</a></span><div class="navbar navbar-default"><ul id="contextPages" class="nav nav-pills nav-stacked"><li class="slide-menu-toggle-btns-wrapper"><ul id="slide-menu-toggle-btns" class="nav nav-pills nav-stacked slide-menu-toggle-btns"><li class="active"><a id="menu-links-tab" data-toggle="tab" href="#menu-links" aria-expanded="true" aria-controls="menu-links">Menu</a></li><li><a id="quick-links-tab" data-toggle="tab" href="#quick-links" aria-expanded="false" aria-controls="quick-links">Quick Links</a></li></ul></li><li id="menu-links" class="menu-links tab-pane fade in active"><ul id="this-context-pages" class="nav nav-pills nav-stacked" aria-label="Page menu "><li><a href="/ICS/myMACC-Home.jnz" >myMACC-Home</a></li><li class="current-page"><button id="page-portlets-label" type="button" class="page-portlets sub-nav" data-toggle="collapse" data-target="#pagePortlets" aria-expanded="false" aria-controls="pagePortlets">Course Offerings<span class="glyphicons glyphicons-chevron-down"></span></button><ul id="pagePortlets" class="nav nav-pills nav-stacked sub-nav collapse" aria-labelledby="page-portlets-label"><li><a href="/ICS/Course_Offerings.jnz?portlet=Course_Search" >Course Search</a></li><li><a href="/ICS/Course_Offerings.jnz?portlet=Free-form_Content" >Textbook Information</a></li></ul></li><li><a href="/ICS/Directory.jnz" >Directory</a></li></ul></li><li id="quick-links" class="quick-links tab-pane fade"><span class="sidebar-link-title">Quick Links</span><ul id="quick-links-menu" class="nav nav-pills nav-stacked"><li class="quick-links-with-sub-nav"><button id="myPages-label" class="my-pages sub-nav" data-toggle="collapse" type="button" data-target="#myPages" aria-expanded="false" aria-controls="myPages">My Pages<span class="glyphicons glyphicons-chevron-down"></span></button><ul class="nav nav-pills nav-stacked sub-nav collapse" id="myPages"><li><a href="/ICS/My_Pages/" >Set Up My Pages</a></li></ul></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://www.macc.edu/" title="MACC Homepage">MACC Homepage<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://outlook.com/mail.macc.edu" title="Student Email">Student Email<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://macc.instructure.com/" title="CANVAS Login">CANVAS Login<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://www.macc.edu/index.php/transcript-request" title="Transcripts">Transcripts<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="http://bookstore.macc.edu/home" title="The Greyhound Store">The Greyhound Store<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li></ul></li></ul></div></div>
+									
+
+
+
+
+									
+									<div class="sideBarFoot containerFoot"></div>
+								</div>
+								<button id="sidebar-slide-menu-button" class="slide-menu-btn mobile-hide nsn is-closed" type="button" aria-expanded="false">
+									<span class="sidebar-slide-btn-icon glyphicons glyphicons-chevron-right">
+										<span class="sr-only">Sidebar</span>
+									</span>
+								</button>
+							</div>
+						</nav>
+						
+						<div id="portlets" role="main" class="col-md-10 mobile-padding-horizontal-none">
+							
+							<div id="PageBar_pageTitle" class="page-title page-title-bar">
+    <h2><a href="/ICS/Course_Offerings.jnz" id="contextName">Course Offerings</a></h2>
+</div>
+<div id="PageBar_pageTitleButtons" class="page-title-btn">
+    
+    <button onclick="__doPostBack('PageBar$nonAdminPreferences','')" id="PageBar_nonAdminPreferences" class="btn btn-no-bg-hover-color-content-one glyphicons glyphicons-cogwheel" type="button">
+         <span class="sr-only">Preferences</span>
+    </button>
+    <button id="PageBar_btnPrintView" class="btn btn-no-bg-hover-color-content-one glyphicons glyphicons-print" type="button" onclick="window.print(); return false;">
+        <span class="sr-only">Send to Printer</span>
+    </button>
+    
+</div>
+
+
+							
+							<span id="content" tabindex="-1"></span>
+							<div id="portlet-grid" class="portlet-grid one_column"><div class="row"><div class="portlet-column col-md-12"><div id="PortletIde69e66c67ab34fde961d5655622aeeb1" class="ajaxLoadablePortlet">
+	<div id="pg0_StudentRegistration" class="portlet pt_StudentRegistration pi_Course_Search" style="z-index:0;"><div class="portlet-header-bar"><h3><a href="/ICS/Course_Offerings.jnz?portlet=Course_Search" title="Go to main Course Search screen">Course Search</a> - Course Search</h3><div class="portlet-help-wrapper"> <a class="btn btn-no-bg-hover-color-content-one help" target="blank" href="https://jenzabarhelp.jenzabar.com/ews/help/JICS/released/en/campus-portal-student-registration.html" title="Get help using 'Course Search'"><span class="glyphicons glyphicons-question-sign"><span class="sr-only">Get help using 'Course Search'</span></span></a></div></div><div class="portlet-padding StudentRegistration"><div data-view-name="StudentRegistrationPortlet_CourseSearchView" class="ex-crm-portlet-view">
+
+		
+
+<div class="srCourseSearchView">
+    <div class="row">
+        <div class="AjaxPortletForm " ><input type="hidden" name="CurrentPortletState" value="Maximized" /><input type="hidden" name="ScreenToProcessForm" value="StudentRegistrationPortlet_CourseSearchView" /><input type="hidden" name="NextScreenToLoad" value="StudentRegistrationPortlet_CourseSearchView" /><input type="hidden" name="PostUrl" value="/ICS/Course_Offerings.jnz?portlet=Course_Search&screen=StudentRegistrationPortlet_CourseSearchView&screenType=next" />
+        <div id="CourseSearchBar" class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-xs-12">
+            <div class="sr-left-header secondary-alternate-background-one table-bordered connected">
+                
+<script>
+    window.jenzabar = window.jenzabar || {};
+    window.jenzabar.crm = window.jenzabar.crm || {};
+    window.jenzabar.crm.registration = window.jenzabar.crm.registration || {};
+    window.jenzabar.crm.registration.yearTermSelect = window.jenzabar.crm.registration.yearTermSelect ||
+    {
+        initialize: function (context, id, options) {
+            if (!options) {
+                options = {};
+            }
+            options.containerCssClass = "selectContainer";
+            options.dropdownCssClass = options.dropdownCssClass ? options.dropdownCssClass : "selectContainer";
+            options.dropdownAutoWidth = options.dropdownAutoWidth ? options.dropdownAutoWidth : true;
+            options.minimumResultsForSearch = options.minimumResultsForSearch ? options.minimumResultsForSearch : -1;
+
+            context.find(id).select2({
+                containerCssClass: "selectContainer",
+                dropdownCssClass: "selectContainer",
+                dropdownAutoWidth: true,
+                minimumResultsForSearch: -1,
+                dropdownParent: context.find(id).parent(),
+                srLabelText: "Term selection drop-down. Select a term for course planning and registration."
+            });
+        }
+    };
+</script>
+
+
+
+        <label for="stuRegTermSelect" class="sr-only" >Term selection drop-down. Select a term for course planning and registration.</label>
+    
+<select name="stuRegTermSelect" 
+        id="stuRegTermSelect"
+        data-ajaxformsubmit="/ICS/Course_Offerings.jnz?portlet=Course_Search">
+    
+                <option value="2023;SP" selected>&nbsp;2024 - Spring</option>
+
+            
+            <optgroup label="Past Registration Periods">
+                <option value='2023;FA' >&nbsp;2023 - Fall</option>
+            </optgroup>
+        
+
+</select>
+                <a id="HideCourseSearchBar" href="javascript:void(0)" class="hidden-sm hidden-xs pull-right x-icon">
+                    <span class="glyphicon glyphicon-remove">
+                        <span class="sr-only">Hide Course Search</span>
+                    </span>
+                </a>
+            </div>
+            <hr class="sr-left-term-bottom table-bordered">
+            <div class="sr-left-header secondary-alternate-background-one table-bordered connected sr-accordion-header">
+                <h4 class="sr-accordian-title">
+                <a class="plus-minus-link" href="javascript:void(0);">
+                    <span class="glyphicons glyphicons-minus hidden-xl hidden-lg hidden-md"></span>
+                    <span class="text">Course Search</span>
+                    
+                </a>
+                
+
+                </h4>
+            </div>
+            <div class="sr-accordion-contents">
+                <div class="sr-left-data-section table-bordered">
+                    <form id="courseSearchField">
+                    <legend class="sr-only">Course Search</legend>
+                        <div class="ex-crm-portlet-view">
+
+			
+<div class="sr-left-data">
+    <label class="control-label">
+        Course Code
+    </label>
+    <div class="row">
+        <div class="col-xs-6 form-group">
+                <label for="ddCodeSearchType" class="sr-only">
+                    Course Code Search Type
+                </label>            
+                <div class="col-xs-12">
+
+                    <select name="ddCodeSearchType" id="ddCodeSearchType" title="Course Code Search Type">
+                        
+                            <option value="0"  >&nbsp;Begins With</option>
+                            <option value="1"  >&nbsp;Ends With</option>
+                            <option value="2"  >&nbsp;Exact Match</option>
+                            <option value="3"  >&nbsp;Contains</option>
+                        
+                    </select>
+                </div>
+        </div>
+        <div class="col-xs-6 form-group">
+            <label for="txtCourse" class="control-label sr-only">
+                Course Code
+            </label>
+            <input type="text" id="txtCourse" name="txtCourse" class="form-control" value="" maxlength="30"/>
+        </div>
+    </div>  
+
+    
+        
+    <label class="control-label">
+        Course Title
+    </label>
+    <div class="row">
+        <div class="col-xs-6 form-group">
+                <label for="ddTitleSearchType" class="sr-only">
+                    Course Title Search Type
+                </label>            
+                <div class="col-xs-12">
+
+                    <select name="ddTitleSearchType" id="ddTitleSearchType" title="Course Title Search Type">
+                        
+                            <option value="0"  >&nbsp;Begins With</option>
+                            <option value="1"  >&nbsp;Ends With</option>
+                            <option value="2"  >&nbsp;Exact Match</option>
+                            <option value="3"  >&nbsp;Contains</option>
+                        
+                    </select>
+                </div>
+        </div>
+        <div class="col-xs-6 form-group">
+            <label for="txtCourseTitle" class="control-label sr-only">
+                Course Title
+            </label>
+            <input type="text" id="txtCourseTitle" name="txtCourseTitle" class="form-control" value="" maxlength="70"/>
+        </div>
+    </div>  
+
+        
+            <label class="control-label">
+                Course Number Range
+            </label>
+        <div class="row">
+            
+     
+            <div class="col-xs-5 form-group">
+                <label for="ddCourseNumberRangeStart" class="col-xs-12 control-label sr-only">
+                    Course Number Range Start
+                </label>
+                <div class="col-xs-12">
+                    <select name="ddCourseNumberRangeStart" id="ddCourseNumberRangeStart" title="Course Number Range Start">
+                        <option value="">&nbsp;</option>
+                        
+                            <option value="001" >&nbsp;001</option>
+                        
+                            <option value="002" >&nbsp;002</option>
+                        
+                            <option value="010" >&nbsp;010</option>
+                        
+                            <option value="015" >&nbsp;015</option>
+                        
+                            <option value="020" >&nbsp;020</option>
+                        
+                            <option value="022" >&nbsp;022</option>
+                        
+                            <option value="023" >&nbsp;023</option>
+                        
+                            <option value="024" >&nbsp;024</option>
+                        
+                            <option value="030" >&nbsp;030</option>
+                        
+                            <option value="031" >&nbsp;031</option>
+                        
+                            <option value="032" >&nbsp;032</option>
+                        
+                            <option value="042" >&nbsp;042</option>
+                        
+                            <option value="053" >&nbsp;053</option>
+                        
+                            <option value="060" >&nbsp;060</option>
+                        
+                            <option value="090" >&nbsp;090</option>
+                        
+                            <option value="095" >&nbsp;095</option>
+                        
+                            <option value="100" >&nbsp;100</option>
+                        
+                            <option value="101" >&nbsp;101</option>
+                        
+                            <option value="102" >&nbsp;102</option>
+                        
+                            <option value="103" >&nbsp;103</option>
+                        
+                            <option value="105" >&nbsp;105</option>
+                        
+                            <option value="106" >&nbsp;106</option>
+                        
+                            <option value="107" >&nbsp;107</option>
+                        
+                            <option value="108" >&nbsp;108</option>
+                        
+                            <option value="110" >&nbsp;110</option>
+                        
+                            <option value="111" >&nbsp;111</option>
+                        
+                            <option value="112" >&nbsp;112</option>
+                        
+                            <option value="113" >&nbsp;113</option>
+                        
+                            <option value="114" >&nbsp;114</option>
+                        
+                            <option value="115" >&nbsp;115</option>
+                        
+                            <option value="116" >&nbsp;116</option>
+                        
+                            <option value="117" >&nbsp;117</option>
+                        
+                            <option value="118" >&nbsp;118</option>
+                        
+                            <option value="120" >&nbsp;120</option>
+                        
+                            <option value="121" >&nbsp;121</option>
+                        
+                            <option value="122" >&nbsp;122</option>
+                        
+                            <option value="123" >&nbsp;123</option>
+                        
+                            <option value="124" >&nbsp;124</option>
+                        
+                            <option value="125" >&nbsp;125</option>
+                        
+                            <option value="126" >&nbsp;126</option>
+                        
+                            <option value="127" >&nbsp;127</option>
+                        
+                            <option value="128" >&nbsp;128</option>
+                        
+                            <option value="129" >&nbsp;129</option>
+                        
+                            <option value="130" >&nbsp;130</option>
+                        
+                            <option value="131" >&nbsp;131</option>
+                        
+                            <option value="135" >&nbsp;135</option>
+                        
+                            <option value="136" >&nbsp;136</option>
+                        
+                            <option value="137" >&nbsp;137</option>
+                        
+                            <option value="138" >&nbsp;138</option>
+                        
+                            <option value="140" >&nbsp;140</option>
+                        
+                            <option value="141" >&nbsp;141</option>
+                        
+                            <option value="142" >&nbsp;142</option>
+                        
+                            <option value="143" >&nbsp;143</option>
+                        
+                            <option value="144" >&nbsp;144</option>
+                        
+                            <option value="145" >&nbsp;145</option>
+                        
+                            <option value="150" >&nbsp;150</option>
+                        
+                            <option value="151" >&nbsp;151</option>
+                        
+                            <option value="152" >&nbsp;152</option>
+                        
+                            <option value="153" >&nbsp;153</option>
+                        
+                            <option value="155" >&nbsp;155</option>
+                        
+                            <option value="157" >&nbsp;157</option>
+                        
+                            <option value="160" >&nbsp;160</option>
+                        
+                            <option value="162" >&nbsp;162</option>
+                        
+                            <option value="163" >&nbsp;163</option>
+                        
+                            <option value="164" >&nbsp;164</option>
+                        
+                            <option value="165" >&nbsp;165</option>
+                        
+                            <option value="170" >&nbsp;170</option>
+                        
+                            <option value="171" >&nbsp;171</option>
+                        
+                            <option value="175" >&nbsp;175</option>
+                        
+                            <option value="181" >&nbsp;181</option>
+                        
+                            <option value="182" >&nbsp;182</option>
+                        
+                            <option value="190" >&nbsp;190</option>
+                        
+                            <option value="200" >&nbsp;200</option>
+                        
+                            <option value="201" >&nbsp;201</option>
+                        
+                            <option value="202" >&nbsp;202</option>
+                        
+                            <option value="203" >&nbsp;203</option>
+                        
+                            <option value="204" >&nbsp;204</option>
+                        
+                            <option value="205" >&nbsp;205</option>
+                        
+                            <option value="206" >&nbsp;206</option>
+                        
+                            <option value="209" >&nbsp;209</option>
+                        
+                            <option value="210" >&nbsp;210</option>
+                        
+                            <option value="211" >&nbsp;211</option>
+                        
+                            <option value="213" >&nbsp;213</option>
+                        
+                            <option value="214" >&nbsp;214</option>
+                        
+                            <option value="215" >&nbsp;215</option>
+                        
+                            <option value="216" >&nbsp;216</option>
+                        
+                            <option value="218" >&nbsp;218</option>
+                        
+                            <option value="220" >&nbsp;220</option>
+                        
+                            <option value="221" >&nbsp;221</option>
+                        
+                            <option value="222" >&nbsp;222</option>
+                        
+                            <option value="223" >&nbsp;223</option>
+                        
+                            <option value="225" >&nbsp;225</option>
+                        
+                            <option value="226" >&nbsp;226</option>
+                        
+                            <option value="227" >&nbsp;227</option>
+                        
+                            <option value="228" >&nbsp;228</option>
+                        
+                            <option value="229" >&nbsp;229</option>
+                        
+                            <option value="230" >&nbsp;230</option>
+                        
+                            <option value="231" >&nbsp;231</option>
+                        
+                            <option value="232" >&nbsp;232</option>
+                        
+                            <option value="233" >&nbsp;233</option>
+                        
+                            <option value="235" >&nbsp;235</option>
+                        
+                            <option value="236" >&nbsp;236</option>
+                        
+                            <option value="239" >&nbsp;239</option>
+                        
+                            <option value="240" >&nbsp;240</option>
+                        
+                            <option value="241" >&nbsp;241</option>
+                        
+                            <option value="242" >&nbsp;242</option>
+                        
+                            <option value="243" >&nbsp;243</option>
+                        
+                            <option value="244" >&nbsp;244</option>
+                        
+                            <option value="245" >&nbsp;245</option>
+                        
+                            <option value="247" >&nbsp;247</option>
+                        
+                            <option value="250" >&nbsp;250</option>
+                        
+                            <option value="251" >&nbsp;251</option>
+                        
+                            <option value="252" >&nbsp;252</option>
+                        
+                            <option value="253" >&nbsp;253</option>
+                        
+                            <option value="255" >&nbsp;255</option>
+                        
+                            <option value="258" >&nbsp;258</option>
+                        
+                            <option value="259" >&nbsp;259</option>
+                        
+                            <option value="260" >&nbsp;260</option>
+                        
+                            <option value="261" >&nbsp;261</option>
+                        
+                            <option value="262" >&nbsp;262</option>
+                        
+                            <option value="263" >&nbsp;263</option>
+                        
+                            <option value="264" >&nbsp;264</option>
+                        
+                            <option value="265" >&nbsp;265</option>
+                        
+                            <option value="270" >&nbsp;270</option>
+                        
+                            <option value="271" >&nbsp;271</option>
+                        
+                            <option value="275" >&nbsp;275</option>
+                        
+                            <option value="280" >&nbsp;280</option>
+                        
+                            <option value="281" >&nbsp;281</option>
+                        
+                            <option value="282" >&nbsp;282</option>
+                        
+                            <option value="283" >&nbsp;283</option>
+                        
+                            <option value="285" >&nbsp;285</option>
+                        
+                            <option value="290" >&nbsp;290</option>
+                        
+                            <option value="291" >&nbsp;291</option>
+                        
+                            <option value="292" >&nbsp;292</option>
+                        
+                            <option value="293" >&nbsp;293</option>
+                        
+                            <option value="294" >&nbsp;294</option>
+                        
+                            <option value="295" >&nbsp;295</option>
+                        
+                            <option value="296" >&nbsp;296</option>
+                        
+                            <option value="299" >&nbsp;299</option>
+                        
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-xs-2 ju-text-align-center">
+                <span>to</span>
+            </div>
+       
+            <div class="col-xs-5 form-group">
+                <label for="ddCourseNumberRangeEnd" class="col-xs-12 control-label sr-only">
+                    Course Number Range End
+                </label>
+                <div class="col-xs-12">
+                    <select name="ddCourseNumberRangeEnd" id="ddCourseNumberRangeEnd" title="Course Number Range End">
+                        <option value="">&nbsp;</option>
+                        
+                            <option value="001"  >&nbsp;001</option>
+                        
+                            <option value="002"  >&nbsp;002</option>
+                        
+                            <option value="010"  >&nbsp;010</option>
+                        
+                            <option value="015"  >&nbsp;015</option>
+                        
+                            <option value="020"  >&nbsp;020</option>
+                        
+                            <option value="022"  >&nbsp;022</option>
+                        
+                            <option value="023"  >&nbsp;023</option>
+                        
+                            <option value="024"  >&nbsp;024</option>
+                        
+                            <option value="030"  >&nbsp;030</option>
+                        
+                            <option value="031"  >&nbsp;031</option>
+                        
+                            <option value="032"  >&nbsp;032</option>
+                        
+                            <option value="042"  >&nbsp;042</option>
+                        
+                            <option value="053"  >&nbsp;053</option>
+                        
+                            <option value="060"  >&nbsp;060</option>
+                        
+                            <option value="090"  >&nbsp;090</option>
+                        
+                            <option value="095"  >&nbsp;095</option>
+                        
+                            <option value="100"  >&nbsp;100</option>
+                        
+                            <option value="101"  >&nbsp;101</option>
+                        
+                            <option value="102"  >&nbsp;102</option>
+                        
+                            <option value="103"  >&nbsp;103</option>
+                        
+                            <option value="105"  >&nbsp;105</option>
+                        
+                            <option value="106"  >&nbsp;106</option>
+                        
+                            <option value="107"  >&nbsp;107</option>
+                        
+                            <option value="108"  >&nbsp;108</option>
+                        
+                            <option value="110"  >&nbsp;110</option>
+                        
+                            <option value="111"  >&nbsp;111</option>
+                        
+                            <option value="112"  >&nbsp;112</option>
+                        
+                            <option value="113"  >&nbsp;113</option>
+                        
+                            <option value="114"  >&nbsp;114</option>
+                        
+                            <option value="115"  >&nbsp;115</option>
+                        
+                            <option value="116"  >&nbsp;116</option>
+                        
+                            <option value="117"  >&nbsp;117</option>
+                        
+                            <option value="118"  >&nbsp;118</option>
+                        
+                            <option value="120"  >&nbsp;120</option>
+                        
+                            <option value="121"  >&nbsp;121</option>
+                        
+                            <option value="122"  >&nbsp;122</option>
+                        
+                            <option value="123"  >&nbsp;123</option>
+                        
+                            <option value="124"  >&nbsp;124</option>
+                        
+                            <option value="125"  >&nbsp;125</option>
+                        
+                            <option value="126"  >&nbsp;126</option>
+                        
+                            <option value="127"  >&nbsp;127</option>
+                        
+                            <option value="128"  >&nbsp;128</option>
+                        
+                            <option value="129"  >&nbsp;129</option>
+                        
+                            <option value="130"  >&nbsp;130</option>
+                        
+                            <option value="131"  >&nbsp;131</option>
+                        
+                            <option value="135"  >&nbsp;135</option>
+                        
+                            <option value="136"  >&nbsp;136</option>
+                        
+                            <option value="137"  >&nbsp;137</option>
+                        
+                            <option value="138"  >&nbsp;138</option>
+                        
+                            <option value="140"  >&nbsp;140</option>
+                        
+                            <option value="141"  >&nbsp;141</option>
+                        
+                            <option value="142"  >&nbsp;142</option>
+                        
+                            <option value="143"  >&nbsp;143</option>
+                        
+                            <option value="144"  >&nbsp;144</option>
+                        
+                            <option value="145"  >&nbsp;145</option>
+                        
+                            <option value="150"  >&nbsp;150</option>
+                        
+                            <option value="151"  >&nbsp;151</option>
+                        
+                            <option value="152"  >&nbsp;152</option>
+                        
+                            <option value="153"  >&nbsp;153</option>
+                        
+                            <option value="155"  >&nbsp;155</option>
+                        
+                            <option value="157"  >&nbsp;157</option>
+                        
+                            <option value="160"  >&nbsp;160</option>
+                        
+                            <option value="162"  >&nbsp;162</option>
+                        
+                            <option value="163"  >&nbsp;163</option>
+                        
+                            <option value="164"  >&nbsp;164</option>
+                        
+                            <option value="165"  >&nbsp;165</option>
+                        
+                            <option value="170"  >&nbsp;170</option>
+                        
+                            <option value="171"  >&nbsp;171</option>
+                        
+                            <option value="175"  >&nbsp;175</option>
+                        
+                            <option value="181"  >&nbsp;181</option>
+                        
+                            <option value="182"  >&nbsp;182</option>
+                        
+                            <option value="190"  >&nbsp;190</option>
+                        
+                            <option value="200"  >&nbsp;200</option>
+                        
+                            <option value="201"  >&nbsp;201</option>
+                        
+                            <option value="202"  >&nbsp;202</option>
+                        
+                            <option value="203"  >&nbsp;203</option>
+                        
+                            <option value="204"  >&nbsp;204</option>
+                        
+                            <option value="205"  >&nbsp;205</option>
+                        
+                            <option value="206"  >&nbsp;206</option>
+                        
+                            <option value="209"  >&nbsp;209</option>
+                        
+                            <option value="210"  >&nbsp;210</option>
+                        
+                            <option value="211"  >&nbsp;211</option>
+                        
+                            <option value="213"  >&nbsp;213</option>
+                        
+                            <option value="214"  >&nbsp;214</option>
+                        
+                            <option value="215"  >&nbsp;215</option>
+                        
+                            <option value="216"  >&nbsp;216</option>
+                        
+                            <option value="218"  >&nbsp;218</option>
+                        
+                            <option value="220"  >&nbsp;220</option>
+                        
+                            <option value="221"  >&nbsp;221</option>
+                        
+                            <option value="222"  >&nbsp;222</option>
+                        
+                            <option value="223"  >&nbsp;223</option>
+                        
+                            <option value="225"  >&nbsp;225</option>
+                        
+                            <option value="226"  >&nbsp;226</option>
+                        
+                            <option value="227"  >&nbsp;227</option>
+                        
+                            <option value="228"  >&nbsp;228</option>
+                        
+                            <option value="229"  >&nbsp;229</option>
+                        
+                            <option value="230"  >&nbsp;230</option>
+                        
+                            <option value="231"  >&nbsp;231</option>
+                        
+                            <option value="232"  >&nbsp;232</option>
+                        
+                            <option value="233"  >&nbsp;233</option>
+                        
+                            <option value="235"  >&nbsp;235</option>
+                        
+                            <option value="236"  >&nbsp;236</option>
+                        
+                            <option value="239"  >&nbsp;239</option>
+                        
+                            <option value="240"  >&nbsp;240</option>
+                        
+                            <option value="241"  >&nbsp;241</option>
+                        
+                            <option value="242"  >&nbsp;242</option>
+                        
+                            <option value="243"  >&nbsp;243</option>
+                        
+                            <option value="244"  >&nbsp;244</option>
+                        
+                            <option value="245"  >&nbsp;245</option>
+                        
+                            <option value="247"  >&nbsp;247</option>
+                        
+                            <option value="250"  >&nbsp;250</option>
+                        
+                            <option value="251"  >&nbsp;251</option>
+                        
+                            <option value="252"  >&nbsp;252</option>
+                        
+                            <option value="253"  >&nbsp;253</option>
+                        
+                            <option value="255"  >&nbsp;255</option>
+                        
+                            <option value="258"  >&nbsp;258</option>
+                        
+                            <option value="259"  >&nbsp;259</option>
+                        
+                            <option value="260"  >&nbsp;260</option>
+                        
+                            <option value="261"  >&nbsp;261</option>
+                        
+                            <option value="262"  >&nbsp;262</option>
+                        
+                            <option value="263"  >&nbsp;263</option>
+                        
+                            <option value="264"  >&nbsp;264</option>
+                        
+                            <option value="265"  >&nbsp;265</option>
+                        
+                            <option value="270"  >&nbsp;270</option>
+                        
+                            <option value="271"  >&nbsp;271</option>
+                        
+                            <option value="275"  >&nbsp;275</option>
+                        
+                            <option value="280"  >&nbsp;280</option>
+                        
+                            <option value="281"  >&nbsp;281</option>
+                        
+                            <option value="282"  >&nbsp;282</option>
+                        
+                            <option value="283"  >&nbsp;283</option>
+                        
+                            <option value="285"  >&nbsp;285</option>
+                        
+                            <option value="290"  >&nbsp;290</option>
+                        
+                            <option value="291"  >&nbsp;291</option>
+                        
+                            <option value="292"  >&nbsp;292</option>
+                        
+                            <option value="293"  >&nbsp;293</option>
+                        
+                            <option value="294"  >&nbsp;294</option>
+                        
+                            <option value="295"  >&nbsp;295</option>
+                        
+                            <option value="296"  >&nbsp;296</option>
+                        
+                            <option value="299"  >&nbsp;299</option>
+                        
+                    </select>    
+                </div>
+            </div>
+        </div>
+        
+    
+    <div class="form-group">
+        <label for="txtInstructor" class="control-label">
+            Instructor
+        </label>
+        <input type="text" id="txtInstructor" name="txtInstructor" class="form-control"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="txtDepartment" class="control-label">
+            Department
+        </label>
+        <input type="text" id="txtDepartment" name="txtDepartment" class="form-control"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="txtLocation" class="control-label">
+            Location
+        </label>
+        <input type="text" id="txtLocation" name="txtLocation" class="form-control"/>
+    </div>
+    
+    <div class="form-group">
+        <label for="ddSubterm" class="control-label">
+            Subterm
+        </label>
+        <div class="col-xs-12 ju-padding-bottom-1em">
+            <select name="ddSubterm" id="ddSubterm" title="Subterm">
+                <option value="">&nbsp;</option>
+                
+                    <option value="SF" >&nbsp;Spring Full 16 Weeks</option>
+                
+                    <option value="S1" >&nbsp;Spring First 8 Weeks</option>
+                
+                    <option value="S2" >&nbsp;Spring Second 8 Weeks</option>
+                
+                    <option value="P4" >&nbsp;Spring Practical Nursing</option>
+                
+                    <option value="AS" >&nbsp;Spring Virtual ADN</option>
+                
+                    <option value="A1" >&nbsp;Spring Virtual ADN 1st 8 Week</option>
+                
+                    <option value="A2" >&nbsp;Spring Virtual ADN 2nd 8 Week</option>
+                
+                    <option value="OS" >&nbsp;Spring Occ Therapy Assistant</option>
+                
+                    <option value="SD" >&nbsp;Spring Dual Credit Online</option>
+                
+                    <option value="SH" >&nbsp;Spring DC at High School</option>
+                
+                    <option value="IV" >&nbsp;IV Therapy Week</option>
+                
+            </select>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="ddMethod" class="control-label">
+            Meeting Type
+        </label>
+        <div class="col-xs-12 ju-padding-bottom-1em">
+            <select name="ddMethod" id="ddMethod" multiple="multiple" title="Meeting Type">
+                
+                    <option value="AR" >&nbsp;Arranged</option>
+                
+                    <option value="CL" >&nbsp;Clinical Experience</option>
+                
+                    <option value="DO" >&nbsp;DCON</option>
+                
+                    <option value="DC" >&nbsp;Dual Credit</option>
+                
+                    <option value="H" >&nbsp;Hybrid</option>
+                
+                    <option value="HV" >&nbsp;Hybrid Virtual</option>
+                
+                    <option value="LB" >&nbsp;Lab</option>
+                
+                    <option value="L" >&nbsp;Lecture</option>
+                
+                    <option value="LV" >&nbsp;Lecture/Virtual</option>
+                
+                    <option value="I" >&nbsp;Online</option>
+                
+                    <option value="V" >&nbsp;Virtual</option>
+                
+            </select>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="ddSectionStatus" class="control-label">
+            Section Status
+        </label>
+        <div class="col-xs-12 ju-padding-bottom-1em">
+            <select name="ddSectionStatus" id="ddSectionStatus" title="Section Status">
+                
+                    <option value="" >&nbsp;</option>
+                
+                    <option value="O" >&nbsp;Open</option>
+                
+                    <option value="F" >&nbsp;Full</option>
+                
+            </select>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <span class="control-label">
+            Meets on Selected Days
+        </span>
+        <div class="select-days-of-week-days-container">
+            <label id="lblMonday" class="hidden">Meets on Monday</label>
+            <label id="lblTuesday" class="hidden">Meets on Tuesday</label>
+            <label id="lblWednesday" class="hidden">Meets on Wednesday</label>
+            <label id="lblThursday" class="hidden">Meets on Thursday</label>
+            <label id="lblFriday" class="hidden">Meets on Friday</label>
+            <label id="lblSaturday" class="hidden">Meets on Saturday</label>
+            <label id="lblSunday" class="hidden">Meets on Sunday</label>
+            <button id="Monday" aria-labelledby="lblMonday" aria-pressed="false" type="button" class="select-days-of-week secondary-alternate-content-one not-selected">M</button>
+            <button id="Tuesday" aria-labelledby="lblTuesday" aria-pressed="false" type="button" class="select-days-of-week secondary-alternate-content-one not-selected">Tu</button>
+            <button id="Wednesday" aria-labelledby="lblWednesday" aria-pressed="false" type="button" class="select-days-of-week secondary-alternate-content-one not-selected">W</button>
+            <button id="Thursday" aria-labelledby="lblThursday" aria-pressed="false" type="button" class="select-days-of-week secondary-alternate-content-one not-selected">Th</button>
+            <button id="Friday" aria-labelledby="lblFriday" aria-pressed="false" type="button" class="select-days-of-week secondary-alternate-content-one not-selected">F</button>
+            <button id="Saturday" aria-labelledby="lblSaturday" aria-pressed="false" type="button" class="select-days-of-week secondary-alternate-content-one not-selected">Sa</button>
+            <button id="Sunday" aria-labelledby="lblSunday" aria-pressed="false" type="button" class="select-days-of-week secondary-alternate-content-one not-selected">Su</button>
+        </div>
+    </div>
+    
+    
+    <div class="row ju-padding-right-pt7em">
+    <button class="col-xs-12 btn btn-primary submit-search">Search Courses</button>
+    <!-- New button for joining waitlist -->
+    <button class="col-xs-12 btn btn-secondary join-waitlist" style="margin-top: 10px;">Join Waitlist</button>
+</div>
+
+
+
+    
+</div>
+
+		</div>
+		
+                    </form>
+                </div>
+            </div>
+            <hr class="sr-left-bottom hidden-sm hidden-xs table-bordered">
+        </div>
+        </div>
+        <div id="CourseSearchResults" class="col-xl-9 col-lg-9 col-md-8 col-sm-12 col-xs-12">
+            <div class="sr-footable-header secondary-alternate-background-one table-bordered hidden-sm hidden-xs">
+                <a id="ShowCourseSearchBar" href="javascript:void(0)" style="display: none;">
+                    Show Course Search
+                </a>
+            </div>
+        <script>
+jenzabar.displayTableFormat.Register('CourseSearchResultsTable', {"fetching":{"enabled":true},"sorting":{"enabled":true},"columns":[{"name":"courseCode","title":"Course Code","breakpoints":null,"type":null,"style":null,"formatString":null,"sortable":true,"sorted":true,"direction":null,"classes":null,"value":null,"isHeader":false,"headerScope":null,"tooltip":null},{"name":"title","title":"Title","breakpoints":"sm xs","type":null,"style":null,"formatString":null,"sortable":true,"sorted":false,"direction":null,"classes":null,"value":null,"isHeader":false,"headerScope":null,"tooltip":null},{"name":"faculty","title":"Faculty","breakpoints":"sm xs","type":null,"style":null,"formatString":null,"sortable":true,"sorted":false,"direction":null,"classes":null,"value":null,"isHeader":false,"headerScope":null,"tooltip":null},{"name":"seatsOpen","title":"Seats Open","breakpoints":"sm xs","type":null,"style":{"width":"90px"},"formatString":null,"sortable":false,"sorted":false,"direction":null,"classes":null,"value":null,"isHeader":false,"headerScope":null,"tooltip":null},{"name":"status","title":"Status","breakpoints":null,"type":null,"style":{"width":"75px"},"formatString":null,"sortable":true,"sorted":false,"direction":null,"classes":null,"value":null,"isHeader":false,"headerScope":null,"tooltip":null},{"name":"schedule","title":"Schedule","breakpoints":"sm xs","type":null,"style":null,"formatString":null,"sortable":false,"sorted":false,"direction":null,"classes":null,"value":null,"isHeader":false,"headerScope":null,"tooltip":null},{"name":"credits","title":"Credits","breakpoints":"sm xs","type":null,"style":{"width":"80px"},"formatString":null,"sortable":true,"sorted":false,"direction":null,"classes":null,"value":null,"isHeader":false,"headerScope":null,"tooltip":null}],"on":{"after.ft.fetching":new StudentRegistrationPortlet('PortletIde69e66c67ab34fde961d5655622aeeb1').srInitializeTableElements}});
+</script>
+<div class='footable-container secondary-alternate-background-one default-bottom-border list-view'>
+<table id='CourseSearchResultsTable' class='crmFootable table-bordered'
+data-url='/ICS/webserviceproxy/exi/rest/studentregistration/pagedsectiondataforsearch?Id=57&IdNumber=189789&YearCode=2023&TermCode=SP'
+data-paging-size='15'
+data-original-page-size='15'
+data-no-rows-text='To see courses, enter criteria in any fields, and click Search Courses. To narrow the results, enter more criteria.'
+data-page='true'
+data-paging='true'
+data-is-server='true'>
+<thead>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
+
+        </div>
+    </div>
+    
+</div>
+	</div>
+	</div></div>
+
+</div></div></div></div>
+							<div class="portletsFoot containerFoot"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid footer-wrapper primary">
+				<div class="row no-margin-r no-margin-l">
+					<div class="col-md-12"><footer><div id="foot" class="footer-links"><a target="_blank" href="/ICS/ClientConfig/HtmlContent/Privacy.html" >Privacy policy</a><a target="_blank" href="/ICS/ClientConfig/HtmlContent/AboutUs.html" >About us</a><a target="_blank" href="/ICS/ClientConfig/HtmlContent/ContactUs.html" >Contact us</a><span id="copyright">  Powered by Jenzabar. v2023.1</span></div></footer></div>
+				</div>
+			</div>
+			
+		
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("_scriptManager_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();//]]>
+</script>
+</form>
+	</div>
+<script type="text/javascript">
+	$(function() {
+		$("#youAreHere a:last").attr("aria-current", "page");
+
+		jenzabar.framework.accessibleSidebarMenu.init();
+		jenzabar.framework.accessibleSearchMenu.init();
+		jenzabar.framework.accessibleLoginMenu.init();
+		jenzabar.framework.accessibleHamburgerMenu.init();
+	});
+</script>
+</body>
+</html>

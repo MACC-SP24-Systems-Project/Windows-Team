@@ -1,0 +1,123 @@
+﻿@page
+@model YourNamespace.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<form method="post" asp-page-handler="OnPostAsync">
+    <!-- stacked vertical dropdown menus -->
+    <div class="dropdown mt-3" style="width: 12%;">
+        <select id="classTypeSelect" class="form-select form-select-sm" aria-label="Dropdown menu 1" required>
+            <option selected disabled hidden>Class Type</option>
+            <option value="Art">Art</option>
+            <option value="Bio">Bio</option>
+            <option value="ITC">ITC</option>
+        </select>
+        <input type="hidden" id="classType" name="ClassType" />
+    </div>
+
+    <div class="dropdown mt-3" style="width: 12%;">
+        <select id="courseNumberSelect" class="form-select form-select-sm" aria-label="Dropdown menu 2" required>
+            <option selected disabled hidden>Course Number</option>
+            <option value="101">101</option>
+            <option value="201">201</option>
+            <option value="301">301</option>
+        </select>
+        <input type="hidden" id="courseNumber" name="CourseNumber" />
+    </div>
+
+    <div class="dropdown mt-3" style="width: 12%;">
+        <select id="sectionNumberSelect" class="form-select form-select-sm" aria-label="Dropdown menu 3" required>
+            <option selected disabled hidden>Section Number</option>
+            <option value="A1">A1</option>
+            <option value="B1">B1</option>
+        </select>
+        <input type="hidden" id="sectionNumber" name="SectionNumber" />
+    </div>
+
+    <div class="dropdown mt-3" style="width: 12%;">
+        <select id="termSelect" class="form-select form-select-sm" aria-label="Dropdown menu 4" required>
+            <option selected disabled hidden>Term</option>
+            <option value="Spring">Spring</option>
+            <option value="Summer">Summer</option>
+            <option value="Fall">Fall</option>
+            <option value="Winter">Winter</option>
+        </select>
+        <input type="hidden" id="term" name="Term" />
+    </div>
+
+
+
+    <!-- First Name input box -->
+    <div class="row mt-3">
+        <div class="col-2">
+            <input type="text" class="form-control" placeholder="First Name" aria-label="First Name" aria-describedby="basic-addon2" asp-for="FirstName" required>
+        </div>
+    </div>
+
+    <!-- Last Name input box -->
+    <div class="row mt-3">
+        <div class="col-2">
+            <input type="text" class="form-control" placeholder="Last Name" aria-label="Last Name" aria-describedby="basic-addon2" asp-for="LastName" required>
+        </div>
+    </div>
+
+    <!-- Email input box -->
+    <div class="row mt-3">
+        <div class="col-5">
+            <input type="email" class="form-control" placeholder="Enter your email" aria-label="Email" aria-describedby="basic-addon2" asp-for="Email" required>
+        </div>
+    </div>
+
+    <!-- Submit button -->
+    <button id="SubmitButton" type="submit" class="btn btn-success mt-4">Submit</button>
+</form>
+
+
+@section Scripts {
+   <!--script to get the dropdown value instead of option number-->
+    <script>
+        document.getElementById("SubmitButton").addEventListener("click", function () {
+
+            // Get the selected text of the class type dropdown
+            var classTypeSelect = document.getElementById("classTypeSelect");
+            var classTypeText = classTypeSelect.options[classTypeSelect.selectedIndex].text;
+            // Update the hidden input field with the selected class type text
+            document.getElementById("classType").value = classTypeText;
+
+            // Get the selected text of the course number dropdown
+            var courseNumberSelect = document.getElementById("courseNumberSelect");
+            var courseNumberText = courseNumberSelect.options[courseNumberSelect.selectedIndex].text;
+            // Update the hidden input field with the selected course number text
+            document.getElementById("courseNumber").value = courseNumberText;
+
+            // Get the selected text of the section number dropdown
+            var sectionNumberSelect = document.getElementById("sectionNumberSelect");
+            var sectionNumberText = sectionNumberSelect.options[sectionNumberSelect.selectedIndex].text;
+            // Update the hidden input field with the selected section number text
+            document.getElementById("sectionNumber").value = sectionNumberText;
+
+            // Get the selected text of the term dropdown
+            var termSelect = document.getElementById("termSelect");
+            var termText = termSelect.options[termSelect.selectedIndex].text;
+            // Update the hidden input field with the selected term text
+            document.getElementById("term").value = termText;
+        });
+    </script>
+
+    <!--Pop up after submitting, requires fields filled-->
+    <script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const form = document.querySelector('form'); 
+    document.getElementById("SubmitButton").addEventListener("click", function (event) {
+      if (form.checkValidity()) {
+        alert("Thank you for signing up for the waitlist. Please check your email for confirmation");
+      } else {
+        // Prevent the default form submission if the form is not valid
+        event.preventDefault();
+      }
+    });
+  });
+</script>
+
+}
